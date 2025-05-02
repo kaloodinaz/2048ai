@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#151515" />
+  <title>2048 AIソルバー | 2048 AI攻略</title>
+<link rel="manifest" href="/manifest.json"/>
+<meta name="description" content="2048 AIソルバーは、人気パズルゲーム2048をAIが自動で解いてくれるツールです。簡単に勝ち方を学べて、最適な戦略も確認できます。">
+<link href="main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="2048 AIゲーム"/>
+  <meta property="og:site_name" content="2048 AIゲーム"/>
+  <meta property="og:description" content="2048 AIソルバーについて、その仕組みと、人気の2048パズルゲームを効率的に解くための戦略についてご紹介します。"/>
+  <meta property="og:image" content="og_image.png"/>
+</head>
+<body>
+<script>
+      if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/sw.js')
+      .then(registration => {console.log('Service Worker registered successfully:', registration);})
+      .catch(error => {console.log('Error in Service Worker registration:', error);});});}
+      </script>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048 AI</h1>
+      <div class="score-container">0</div>
+    </div>
+    <p class="game-intro">ゼッケン番号に参加しよう <strong>2048タイル！</strong></p>
+
+    <div class="controls">
+      <div id="hint-button-container">
+        <button id="hint-button" class="ai-button">ヒントを得る</button>
+      </div>
+      <div id="feedback-container"> </div>
+      <div id="run-button-container">
+        <button id="run-button" class="ai-button">オートラン</button>
+      </div>
+    </div>
+    
+    <div class="block block-728"><script type="text/javascript">
+	atOptions = {
+		'key' : 'd1d26e15f7c349fd8e403bb5ea491a31',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/d1d26e15f7c349fd8e403bb5ea491a31/invoke.js"></script></div>
+    <div class="block block-300"><script type="text/javascript">
+	atOptions = {
+		'key' : '0fee57062f9bb330edc13a4e4349876d',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/0fee57062f9bb330edc13a4e4349876d/invoke.js"></script></div>
+
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+          <a class="retry-button">再試行</a>
+          <div class="score-sharing"></div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">プレーの仕方:</strong> 矢印キーでタイルを動かす。同じ数字の2つのタイルが触れると、1つに合体します！
+    </p>
+    <hr>
+    <h2>2048 AIソルバー</h2>
+    <p>
+      <strong>2048 AIソルバー</strong>は、シンプルながらも奥深い数字パズル「2048」を、人工知能（AI）が自動的に解いてくれるオンラインツールです。
+      自分でプレイせずに、AIがどのように最善の手を選びながらタイルを組み合わせていくかを観察することができます。
+      パズルゲームの仕組みを理解したい初心者から、より高いスコアを目指す上級者まで、誰でも楽しむことができます。
+    </p>
+  
+    <p>
+      このAIソルバーは、2048の基本ルールである「同じ数字のタイルを合体させて、2048の数字を目指す」という目的を忠実に実行します。
+      AIは先読みのアルゴリズムを用いて、次に最も有利な手を選択するため、効率よくスコアを上げることが可能です。
+      一度プレイを始めれば、どのようにAIがパズルを解いていくかを視覚的に体験することができ、自然と戦略も学べます。
+    </p>
+  
+    <p>
+      また、AIソルバーはエンタメとしても楽しめます。「2048を見ているだけで楽しい」という方や、「自分の手ではうまくいかないけどAIに任せてみたい」という方にもおすすめです。
+      さらに、プレイヤーが自分で操作することなく結果を確認できるため、気軽に楽しめるのも魅力の一つです。
+    </p>
+  
+    <p>
+      スマートフォン、タブレット、PCなど様々なデバイスに対応しており、ブラウザさえあればどこでもアクセス可能です。
+      完全無料・登録不要で、すぐに2048 AIの知能的な動きを体験することができます。
+    </p>
+  
+    <p>
+      <strong>2048 AIソルバー</strong>を使って、あなたも新しい視点で2048の世界を楽しんでみませんか？  
+      見るだけで勉強になる、プレイしなくても学べる、新しいスタイルのパズル体験がここにあります。
+    </p>
+	  <hr>
+    <p>
+      デザインはガブリエレ・チルッリ。</a>
+    </p>
+    <p>
+      AIソルバー <a href="https://github.com/kaloodinaz/2048-online" target="_blank" >Kaloo Dinaz</a>
+    </p>
+    <div class="sharing">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="数字を組み合わせて高得点を目指すゲーム、2048をチェックしよう！ #2048game #2048ai" data-via="gabrielecirulli">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <span class="btc-donate">
+        <a href="bitcoin:bc1qwqfq0nnum2vdfu7euhjd55adrucgelt4lw3yc2">
+          <img loading="lazy" src="icon_bitcoin.png">寄付する
+        </a>
+        <span class="address"><code>bc1qwqfq0nnum2vdfu7euhjd55adrucgelt4lw3yc2</code></span>
+      </span>
+    </div>
+  </div>
+  <script defer src="main.js"></script>
+</body>
+</html>
